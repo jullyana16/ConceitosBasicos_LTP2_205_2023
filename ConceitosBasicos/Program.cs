@@ -1,21 +1,27 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-string nome = "seu nome";
-Console.WriteLine("Seja bemvindo(a) " + nome);
-string cidade = "Pinheiral";
-Console.WriteLine($"Eu gosto de {cidade}");
-string sobrenome = "de tal", apelido;
-int idade = 16;
-Console.WriteLine($"A idade informada foi {idade}");
 
-byte valor = 255;
-valor += 1; //valor = valor + 1;
-Console.WriteLine($"valor: {valor}");
 
-decimal salario = 5000.20m;
-//como seria a declaração mais adequada para variáveis que armazenam altura, peso e altura em nanometros;
-float altura = 1.60f, peso = 43.2f;
-double alturaEmNano = altura * 0.000000001;
-Console.WriteLine($"A sua altura é {altura}m");
-Console.WriteLine($"se você pudesse ser o homem formiga, teria a altura {alturaEmNano}nm");
-Console.WriteLine($"O peso informado foi: {peso}kg");
+
+//Exercicios com vetores
+
+/*
+ * crie um vetor para armazenar as idades de 5 pessoas e ao final imprima:
+ * 1) a pessoa mais nova
+ * 2) a pessoa mais velha
+ * 3) a média das idades
+ * 4) todas as idades ímpares
+ * 5) todas as idades pares
+ */
+
+byte[] idades = new byte[5];
+for(int i = 0; i < 5; i++)
+{
+    Console.WriteLine($"Informe a {i+1}ª idade");
+    idades[i] = byte.Parse(Console.ReadLine());
+
+}
+Console.WriteLine("As idades informadas foram:");
+foreach(byte idade in idades)
+{
+    Console.WriteLine(idade);
+}
